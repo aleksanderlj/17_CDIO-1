@@ -43,7 +43,7 @@ public class Roll {
             System.out.println();
 
             round++;
-        }while ((p1.getScore() <= 40) && (p2.getScore() <= 40));
+        }while ((p1.getScore() < 40) && (p2.getScore() < 40));
 
         if (p2.getScore() < 40)
             System.out.println(p1.getName() + " har vundet!");
