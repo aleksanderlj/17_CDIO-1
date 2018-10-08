@@ -3,13 +3,19 @@ import java.util.Random;
 public class Die {
 private int faceValue;
 
-
-
+    //---------------
+    //Ruller terning
+    //---------------
     public void rul() {
         Random r = new Random();
         this.faceValue = r.nextInt(6) + 1;
     }
 
+
+
+    //-------------------
+    //Getters og setters
+    //-------------------
     public int getFaceValue(){
         return this.faceValue;
     }
