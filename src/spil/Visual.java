@@ -12,7 +12,7 @@ public class Visual {
         System.out.println("---------------------------------");
         round++;
     }
-    static String[] giveName(Player p1, Player p2){
+    static String[] giveName(){
         System.out.println("Hvad er spiller 1's navn?");
         String name1 = input.nextLine();
         System.out.println();
