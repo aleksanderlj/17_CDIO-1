@@ -6,7 +6,32 @@ public class Visual {
     private static int round = 1;
     private static Scanner input = new Scanner(System.in);
 
+    //---------------------------------
+    // Introduktion uden ekstra regler
+    //---------------------------------
     static void intro(){
+        System.out.println("|=================================================|\n" +
+                "|           VELKOMMEN TIL TERNINGESPIL!           |\n" +
+                "|=================================================|\n" +
+                "| I dette spil slår to spillere med et sæt tern-  |\n" +
+                "| inger og summen af terningernes værdi lægges    |\n" +
+                "| til spillerens samlede point.                   |\n" +
+                "| Den første spiller til at nå 40 point vinder.   |\n" +
+                "|                                                 |\n" +
+                "| OBS. Selv hvis spiller 1 vinder, får spiller 2  |\n" +
+                "| stadig sin tur, da de ellers ikke har slået     |\n" +
+                "| lige mange gange! Spiller 2 har dermed chancen  |\n" +
+                "| for at dele sejren med spiller 1!               |\n" +
+                "|=================================================|");
+        System.out.println("Tryk ENTER for at fortsætte...");
+        input.nextLine();
+        System.out.println();
+    }
+
+    //---------------------------------------------
+    // Introduktion til spillet samt ekstra regler
+    //---------------------------------------------
+    static void introAllRules(){
         System.out.println("|=================================================|\n" +
                            "|           VELKOMMEN TIL TERNINGESPIL!           |\n" +
                            "|=================================================|\n" +
@@ -14,6 +39,11 @@ public class Visual {
                            "| inger og summen af terningernes værdi lægges    |\n" +
                            "| til spillerens samlede point.                   |\n" +
                            "| Den første spiller til at nå 40 point vinder.   |\n" +
+                           "|                                                 |\n" +
+                           "| OBS. Selv hvis spiller 1 vinder, får spiller 2  |\n" +
+                           "| stadig sin tur, da de ellers ikke har slået     |\n" +
+                           "| lige mange gange! Spiller 2 har dermed chancen  |\n" +
+                           "| for at dele sejren med spiller 1!               |\n" +
                            "|                                                 |\n" +
                            "|-------------------------------------------------|\n" +
                            "|                     REGLER                      |\n" +

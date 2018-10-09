@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Roll {
     public static void main(String[] args){
-        Visual.intro();
+        Visual.introAllRules();
         String[] names = Visual.giveName();
 
         Player p1 = new Player(names[0]);
@@ -33,8 +33,11 @@ public class Roll {
                 Rules.setRound(true);
             }
 
-        }while ((p1.getScore() < 40) && (p2.getScore() < 40));
+        }while (((p1.getScore() < 40) && (p2.getScore() < 40) && Rules.getRound()));
 
         Visual.win(p1,p2);
     }
 }
+
+//For at skifte mellem spillet med og uden regler skal alle Player.turn laves om til Player.turnAllRules
+//og Visual.intro() skal skiftes til Visual.introAllRules

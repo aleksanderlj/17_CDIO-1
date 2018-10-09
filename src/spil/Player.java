@@ -16,6 +16,8 @@ public class Player {
     //-------------------------
     public void turn(Die d1, Die d2){
         d1.rul();
+        int s = 2+2;
+        s++;
         d2.rul();
         this.setScore((this.getScore() + d1.getFaceValue() + d2.getFaceValue()));
     }
