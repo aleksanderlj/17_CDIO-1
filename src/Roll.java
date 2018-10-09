@@ -19,7 +19,8 @@ public class Roll {
         int round=1;
         do{
             System.out.println("---------------------------------");
-            System.out.println("Runde " + round);
+            System.out.println("            |Runde " + round + "|");
+            System.out.println(p1.getName() + " [" + p1.getScore() + "]" + " -VS- " + p2.getName() + " [" + p2.getScore() + "]");
             System.out.println("---------------------------------");
 
             System.out.println(p1.getName() + " rul");
@@ -29,7 +30,7 @@ public class Roll {
 
             p1.setScore((p1.getScore() + d1.getFaceValue() + d2.getFaceValue()));
             System.out.println("Du rullede " + d1.getFaceValue() + " og " + d2.getFaceValue());
-            System.out.println(p1.getName() + ", din score er nu " + p1.getScore());
+            System.out.println(p1.getName() + ", din score er nu [" + p1.getScore() + "]");
 
             System.out.println();
             System.out.println(p2.getName() + " rul");
@@ -39,17 +40,19 @@ public class Roll {
 
             p2.setScore((p2.getScore() + d1.getFaceValue() + d2.getFaceValue()));
             System.out.println("Du rullede " + d1.getFaceValue() + " og " + d2.getFaceValue());
-            System.out.println(p2.getName() + ", din score er nu " + p2.getScore());
+            System.out.println(p2.getName() + ", din score er nu [" + p2.getScore() + "]");
             System.out.println();
 
             round++;
         }while ((p1.getScore() < 40) && (p2.getScore() < 40));
 
+        System.out.println("======================");
         if (p2.getScore() < 40)
             System.out.println(p1.getName() + " har vundet!");
         else if (p1.getScore() < 40)
             System.out.println(p2.getName() + " har vundet!");
         else
             System.out.println("I har begge vundet!");
+        System.out.println("======================");
     }
 }
