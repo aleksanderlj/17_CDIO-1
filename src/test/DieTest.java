@@ -1,6 +1,8 @@
 package test;
 
+import org.junit.jupiter.api.Test;
 import spil.Die;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,12 +10,13 @@ class DieTest {
 
     Die d1 = new Die();
 
-    @org.junit.jupiter.api.Test
+    @Test
     void rul() {
         int a2=0, a3=0, a4=0, a5=0, a6=0, a1=0;
 
         while(a1 + a2 + a3 + a4 + a5 + a6 <= 60000) {
 
+            d1.rul();
             int roll = d1.getFaceValue();
 
             if (roll == 1) {
