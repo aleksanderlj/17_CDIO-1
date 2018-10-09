@@ -12,29 +12,19 @@ public class Roll {
         Die d1 = new Die();
         Die d2 = new Die();
 
+        //--------------------
+        // Starten af spillet
+        //--------------------
         do{
             Visual.roundNumber(p1,p2);
 
             Visual.preRound(p1);
-
-            d1.rul();
-            d2.rul();
-            p1.setScore((p1.getScore() + d1.getFaceValue() + d2.getFaceValue()));
-
+            p1.turn(d1,d2);
             Visual.postRound(p1,d1,d2);
 
-            System.out.println();
-
             Visual.preRound(p2);
-
-            d1.rul();
-            d2.rul();
-
-            p2.setScore((p2.getScore() + d1.getFaceValue() + d2.getFaceValue()));
-
+            p2.turn(d1,d2);
             Visual.postRound(p2,d1,d2);
-
-            System.out.println();
 
         }while ((p1.getScore() < 40) && (p2.getScore() < 40));
 
