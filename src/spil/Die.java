@@ -1,3 +1,5 @@
+package spil;
+
 import java.util.Random;
 
 public class Die {
@@ -22,9 +24,9 @@ private int faceValue;
 
 }
 
-//Rul - få et tal fra 1-6 (samt tilføj faceValue til Player objekt)
+//Rul - få et tal fra 1-6 (samt tilføj faceValue til spil.Player objekt)
 //Getters og setters
 
 
 //Ekstra!
-//Sammenlign - Sammenlign to Die-objekters face-value (hint: this.x == other.x)
+//Sammenlign - Sammenlign to spil.Die-objekters face-value (hint: this.x == other.x)

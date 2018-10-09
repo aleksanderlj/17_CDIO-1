@@ -1,9 +1,11 @@
+package spil;
+
 public class Player {
     private int score = 0;
     String name;
 
     //-----------------------------------------------------------------------------------------
-    // Constructor til Player. Når objektet laves gives en String som er navnet til spilleren.
+    // Constructor til spil.Player. Når objektet laves gives en String som er navnet til spilleren.
     //-----------------------------------------------------------------------------------------
     public Player(String name){
         this.name = name;
