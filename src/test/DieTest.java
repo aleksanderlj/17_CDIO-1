@@ -5,7 +5,7 @@ import spil.Die;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-
+// vi tester om terningen er tilfældig
 class DieTest {
 
     Die d1 = new Die();
