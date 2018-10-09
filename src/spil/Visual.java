@@ -3,8 +3,38 @@ package spil;
 import java.util.Scanner;
 
 public class Visual {
-    static int round = 1;
-    static Scanner input = new Scanner(System.in);
+    private static int round = 1;
+    private static Scanner input = new Scanner(System.in);
+
+    static void intro(){
+        System.out.println("|=================================================|\n" +
+                           "|           VELKOMMEN TIL TERNINGESPIL!           |\n" +
+                           "|=================================================|\n" +
+                           "| I dette spil slår to spillere med et sæt tern-  |\n" +
+                           "| inger og summen af terningernes værdi lægges    |\n" +
+                           "| til spillerens samlede point.                   |\n" +
+                           "| Den første spiller til at nå 40 point vinder.   |\n" +
+                           "|                                                 |\n" +
+                           "|-------------------------------------------------|\n" +
+                           "|                     REGLER                      |\n" +
+                           "|-------------------------------------------------|\n" +
+                           "| 1. Spilleren mister alle sine point, hvis       |\n" +
+                           "|    spilleren slår to 1'ere.                     |\n" +
+                           "|                                                 |\n" +
+                           "| 2. Spilleren får en ekstra tur, hvis spilleren  |\n" +
+                           "|    slår to ens.                                 |\n" +
+                           "|                                                 |\n" +
+                           "| 3. Spilleren vinder spillet, hvis spilleren     |\n" +
+                           "|    slår to 6'ere i denne tur, men også slog to  |\n" +
+                           "|    6'ere i forrige tur.                         |\n" +
+                           "|                                                 |\n" +
+                           "| 4. Spilleren skal slå to ens for at vinde spil- |\n" +
+                           "|    let, efter man har opnået 40 point           |\n" +
+                           "|=================================================|");
+        System.out.println("Tryk ENTER for at fortsætte...");
+        input.nextLine();
+        System.out.println();
+    }
 
     //--------------------
     // Viser runde nummer

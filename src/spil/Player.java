@@ -11,13 +11,23 @@ public class Player {
         this.name = name;
     }
 
-    //--------------------------
+    //-------------------------
     //Spiller ruller terninger
-    //--------------------------
+    //-------------------------
     public void turn(Die d1, Die d2){
         d1.rul();
         d2.rul();
         this.setScore((this.getScore() + d1.getFaceValue() + d2.getFaceValue()));
+    }
+
+    //---------------------------------------------------------------------------------------------------
+    // Spiller ruller terninger og der tjekkes for alle regler. Inklusiv ekstra tur hvis der slås to ens
+    //---------------------------------------------------------------------------------------------------
+    public void turnAllRules(Die d1, Die d2){
+        do{
+            this.turn(d1, d2);
+            Rules.allRules(this, d1, d2);
+        }while(d1.getFaceValue() == d2.getFaceValue());
     }
 
     //--------------------
