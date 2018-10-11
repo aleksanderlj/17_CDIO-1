@@ -9,7 +9,7 @@ public class Visual {
     //---------------------------------
     // Introduktion uden ekstra regler
     //---------------------------------
-    static void intro(){
+    public static void intro(){
         System.out.println("|=================================================|\n" +
                 "|           VELKOMMEN TIL TERNINGESPIL!           |\n" +
                 "|=================================================|\n" +
@@ -31,7 +31,7 @@ public class Visual {
     //---------------------------------------------
     // Introduktion til spillet samt ekstra regler
     //---------------------------------------------
-    static void introAllRules(){
+    public static void introAllRules(){
         System.out.println("|=================================================|\n" +
                            "|           VELKOMMEN TIL TERNINGESPIL!           |\n" +
                            "|=================================================|\n" +
@@ -69,7 +69,7 @@ public class Visual {
     //--------------------
     // Viser runde nummer
     //--------------------
-    static void roundNumber(Player p1, Player p2){
+    public static void roundNumber(Player p1, Player p2){
         if (p1.getHadRound() && p2.getHadRound()){
             System.out.println("---------------------------------");
             System.out.println("            |Runde " + round + "|");
@@ -84,7 +84,7 @@ public class Visual {
     //------------------------------------
     //Spørger om to navne til to spillere
     //------------------------------------
-    static String[] giveName(){
+    public static String[] giveName(){
         System.out.println("Hvad er spiller 1's navn?");
         String name1 = input.nextLine();
         System.out.println();
@@ -99,7 +99,7 @@ public class Visual {
     //------------------------------------
     // Fortæller spiller at de skal rulle
     //------------------------------------
-    static void preRound(Player p1){
+    public static void preRound(Player p1){
         System.out.println(p1.getName() + " tryk ENTER for at rulle");
         input.nextLine();
         p1.setHadRound(true);
@@ -108,7 +108,7 @@ public class Visual {
     //-------------------------------------------------
     //Fortæller spiller hvad de rullede og deres score
     //-------------------------------------------------
-    static void postRound(Player p1, Die d1, Die d2){
+    public static void postRound(Player p1, Die d1, Die d2){
         System.out.println("Du rullede " + d1.getFaceValue() + " og " + d2.getFaceValue());
         System.out.println(p1.getName() + ", din score er nu [" + p1.getScore() + "]");
         System.out.println("- - - - - - -");
@@ -118,7 +118,7 @@ public class Visual {
     //-----------------
     //Finder en vinder
     //-----------------
-    static void win(Player p1, Player p2){
+    public static void win(Player p1, Player p2){
         System.out.println("======================");
         if (p2.getScore() < 40)
             System.out.println(p1.getName() + " har vundet!");
