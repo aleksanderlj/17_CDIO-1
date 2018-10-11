@@ -1,3 +1,10 @@
+//******************************************************************
+//  Roll.java        Author: Gruppe 17
+//
+//  Initialiserer objekter til at køre terningespillet samt kører
+//  terningespillet
+//******************************************************************
+
 package spil;
 
 import java.util.Scanner;

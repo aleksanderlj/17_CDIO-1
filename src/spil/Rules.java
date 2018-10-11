@@ -1,3 +1,9 @@
+//******************************************************************
+//  Rules.java        Author: Gruppe 17
+//
+//  Indeholder ekstra-reglerne til spillet.
+//******************************************************************
+
 package spil;
 
 public class Rules {

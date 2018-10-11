@@ -1,3 +1,9 @@
+//******************************************************************
+//  DieTest.java        Author: Gruppe 17
+//
+//  Tester for f
+//******************************************************************
+
 package test;
 
 import org.junit.jupiter.api.Test;
@@ -10,6 +16,9 @@ class DieTest {
     Die d1 = new Die();
     Die d2 = new Die();
 
+    //------------------------------------------------------
+    // Tester om terningen rammer alle værdier fra 1 til 6.
+    //------------------------------------------------------
     @Test
     void Kast() {
         int expectedFace = 6;
@@ -50,7 +59,10 @@ class DieTest {
         assertEquals(expectedFace, actualFace);
     }
 
-    @Test //tester en ternings fordeling
+    //-----------------------------------------------------------------
+    // Tester om terningen rammer alle sider omtrent lige mange gange.
+    //-----------------------------------------------------------------
+    @Test
     void En_Terning() {
         int a2=0, a3=0, a4=0, a5=0, a6=0, a1=0;
 
@@ -94,7 +106,10 @@ class DieTest {
                 && a6 <= 10400 && a6  >= 9600);
 }
 
-    @Test //Tester 2 terningers fordeling
+    //----------------------------------------------------------------
+    // Tester om summen af kastet af to terninger er korrekt fordelt.
+    //----------------------------------------------------------------
+    @Test
     void To_Ternninger() {
         int a2=0, a3=0, a4=0, a5=0, a6=0, a7=0, a8=0, a9=0, a10=0, a11=0, a12 =0;
         final int ANTALTEST = 110000;
@@ -166,6 +181,10 @@ class DieTest {
         assertTrue(a11 <= ANTALTEST * (2.0/36) * 1.05 && a11 >= ANTALTEST * (2.0/36) * 0.95);
         assertTrue(a12 <= ANTALTEST * (1.0/36) * 1.05 && a12 >= ANTALTEST * (1.0/36) * 0.95);
     }
+
+    //-----------------------------------------------------------------------------
+    // Tester om antallet af gange to terninger slår ens værdi er korrekt fordelt.
+    //-----------------------------------------------------------------------------
     @Test
     void Ens_Slag() {
         int ens = 0;

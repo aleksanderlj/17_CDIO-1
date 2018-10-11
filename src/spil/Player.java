@@ -1,3 +1,11 @@
+//******************************************************************
+//  Player.java        Author: Gruppe 17
+//
+//  Repræsenterer én spiller med et navn og hans score, og om han
+//  har haft sin tur endnu.
+//******************************************************************
+
+
 package spil;
 
 public class Player {
