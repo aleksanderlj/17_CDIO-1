@@ -44,7 +44,7 @@ public class Rules {
     public static void delayedWin(Player p1, Die d1, Die d2){
         if (((d1.getFaceValue() != d2.getFaceValue()) && (p1.getScore() >= 40))){
             p1.setScore(39);
-            System.out.println("Du har nået 40 point! Men for at vinde skal du først slå to ens!");
+            System.out.println("Du har nået 40 point! Men for at vinde skal du først slå to ens! Din score er blevet sat til 39.");
         }
         else if (((d1.getFaceValue() == d2.getFaceValue()) && (p1.getScore() > 40)))
             extraTurnsOn = false;
