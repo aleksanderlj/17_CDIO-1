@@ -100,7 +100,7 @@ public class Visual {
     // Fortæller spiller at de skal rulle
     //------------------------------------
     static void preRound(Player p1){
-        System.out.println(p1.getName() + " rul");
+        System.out.println(p1.getName() + " tryk ENTER for at rulle");
         input.nextLine();
         p1.setHadRound(true);
     }
