@@ -70,11 +70,15 @@ public class Visual {
     // Viser runde nummer
     //--------------------
     static void roundNumber(Player p1, Player p2){
-        System.out.println("---------------------------------");
-        System.out.println("            |Runde " + round + "|");
-        System.out.println(p1.getName() + " [" + p1.getScore() + "]" + " -VS- " + p2.getName() + " [" + p2.getScore() + "]");
-        System.out.println("---------------------------------");
-        round++;
+        if (p1.getHadRound() && p2.getHadRound()){
+            System.out.println("---------------------------------");
+            System.out.println("            |Runde " + round + "|");
+            System.out.println(p1.getName() + " [" + p1.getScore() + "]" + " -VS- " + p2.getName() + " [" + p2.getScore() + "]");
+            System.out.println("---------------------------------");
+            round++;
+            p1.setHadRound(false);
+            p2.setHadRound(false);
+        }
     }
 
     //------------------------------------
@@ -98,6 +102,7 @@ public class Visual {
     static void preRound(Player p1){
         System.out.println(p1.getName() + " rul");
         input.nextLine();
+        p1.setHadRound(true);
     }
 
     //-------------------------------------------------
@@ -106,7 +111,8 @@ public class Visual {
     static void postRound(Player p1, Die d1, Die d2){
         System.out.println("Du rullede " + d1.getFaceValue() + " og " + d2.getFaceValue());
         System.out.println(p1.getName() + ", din score er nu [" + p1.getScore() + "]");
-        System.out.println();
+        System.out.println("- - - - - - -");
+
     }
 
     //-----------------
