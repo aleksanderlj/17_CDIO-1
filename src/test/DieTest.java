@@ -54,10 +54,10 @@ class DieTest {
 
     @Test //Tester 2 terningers fordeling
     void rul2() {
-        int a2=0, a3=0, a4=0, a5=0, a6=0, a7=0, a8=0, a9=0, a10=0, a11=0, a12 =0;
-        int antaltest = 110000;
+        int a2=0, a3=0, a4=0, a5=0, a6=0, a7=0, a8=0, a9=0, a10=0, a11=0, a12 =0, ens=0;
+        final int ANTALTEST = 110000;
 
-        while(a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12<= antaltest) {
+        while(a2 + a3 + a4 + a5 + a6 + a7 + a8 + a9 + a10 + a11 + a12<= ANTALTEST) {
 
             d1.rul();
             d2.rul();
@@ -96,6 +96,9 @@ class DieTest {
             if (roll == 12) {
                 a12++;
             }
+            if (d1.getFaceValue()==d2.getFaceValue()){
+                ens++;
+            }
         }
 
         System.out.println("Antal 2'ere " + a2);
@@ -109,16 +112,18 @@ class DieTest {
         System.out.println("Antal 10'ere " + a10);
         System.out.println("Antal 11'ere " + a11);
         System.out.println("Antal 12'ere " + a12);
-        assertTrue(a2 <= antaltest * (1.0/36) * 1.05 && a2 >= antaltest * (1.0/36) * 0.95);
-        assertTrue(a3 <= antaltest * (2.0/36) * 1.05 && a3 >= antaltest * (2.0/36) * 0.95);
-        assertTrue(a4 <= antaltest * (3.0/36) * 1.05 && a4 >= antaltest * (3.0/36) * 0.95);
-        assertTrue(a5 <= antaltest * (4.0/36) * 1.05 && a5 >= antaltest * (4.0/36) * 0.95);
-        assertTrue(a6 <= antaltest * (5.0/36) * 1.05 && a6 >= antaltest * (5.0/36) * 0.95);
-        assertTrue(a7 <= antaltest * (6.0/36) * 1.05 && a7 >= antaltest * (6.0/36) * 0.95);
-        assertTrue(a8 <= antaltest * (5.0/36) * 1.05 && a8 >= antaltest * (5.0/36) * 0.95);
-        assertTrue(a9 <= antaltest * (4.0/36) * 1.05 && a9 >= antaltest * (4.0/36) * 0.95);
-        assertTrue(a10 <= antaltest * (3.0/36) * 1.05 && a10 >= antaltest * (3.0/36) * 0.95);
-        assertTrue(a11 <= antaltest * (2.0/36) * 1.05 && a11 >= antaltest * (2.0/36) * 0.95);
-        assertTrue(a12 <= antaltest * (1.0/36) * 1.05 && a12 >= antaltest * (1.0/36) * 0.95);
+        System.out.println("Gange ens øjne " + ens);
+        assertTrue(a2 <= ANTALTEST * (1.0/36) * 1.05 && a2 >= ANTALTEST * (1.0/36) * 0.95);
+        assertTrue(a3 <= ANTALTEST * (2.0/36) * 1.05 && a3 >= ANTALTEST * (2.0/36) * 0.95);
+        assertTrue(a4 <= ANTALTEST * (3.0/36) * 1.05 && a4 >= ANTALTEST * (3.0/36) * 0.95);
+        assertTrue(a5 <= ANTALTEST * (4.0/36) * 1.05 && a5 >= ANTALTEST * (4.0/36) * 0.95);
+        assertTrue(a6 <= ANTALTEST * (5.0/36) * 1.05 && a6 >= ANTALTEST * (5.0/36) * 0.95);
+        assertTrue(a7 <= ANTALTEST * (6.0/36) * 1.05 && a7 >= ANTALTEST * (6.0/36) * 0.95);
+        assertTrue(a8 <= ANTALTEST * (5.0/36) * 1.05 && a8 >= ANTALTEST * (5.0/36) * 0.95);
+        assertTrue(a9 <= ANTALTEST * (4.0/36) * 1.05 && a9 >= ANTALTEST * (4.0/36) * 0.95);
+        assertTrue(a10 <= ANTALTEST * (3.0/36) * 1.05 && a10 >= ANTALTEST * (3.0/36) * 0.95);
+        assertTrue(a11 <= ANTALTEST * (2.0/36) * 1.05 && a11 >= ANTALTEST * (2.0/36) * 0.95);
+        assertTrue(a12 <= ANTALTEST * (1.0/36) * 1.05 && a12 >= ANTALTEST * (1.0/36) * 0.95);
+        assertTrue(ens <= ANTALTEST * (1.0/6) * 1.04 && ens >= ANTALTEST * (1.0/6) * 0.96);
     }
 }
