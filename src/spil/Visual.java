@@ -1,3 +1,9 @@
+//******************************************************************
+//  Visual.java        Author: Gruppe 17
+//
+//  Indeholder de visuelle elementer til terningespillet.
+//******************************************************************
+
 package spil;
 
 import java.util.Scanner;

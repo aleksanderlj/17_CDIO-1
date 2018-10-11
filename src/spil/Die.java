@@ -1,3 +1,9 @@
+//******************************************************************
+//  Die.java        Author: Gruppe 17
+//
+//  Repræsenterer én terning med værdier svarende til 6 sider.
+//******************************************************************
+
 package spil;
 
 import java.util.Random;
