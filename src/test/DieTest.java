@@ -1,7 +1,7 @@
 //******************************************************************
 //  DieTest.java        Author: Gruppe 17
 //
-//  Tester for f
+//  Dokument til JUnit test af terningespil
 //******************************************************************
 
 package test;
