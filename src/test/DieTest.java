@@ -21,7 +21,7 @@ class DieTest {
     //------------------------------------------------------
     @Test
     void Kast() {
-        int expectedFace = 6;
+        final int EXPECTEDFACE = 6;
         int actualFace = 0;
         int face1 = 0, face2 = 0, face3 = 0, face4 = 0, face5 = 0, face6 = 0;
 
@@ -56,7 +56,7 @@ class DieTest {
                 actualFace++;
             }
         }
-        assertEquals(expectedFace, actualFace);
+        assertEquals(EXPECTEDFACE, actualFace);
     }
 
     //-----------------------------------------------------------------
